@@ -1,0 +1,12 @@
+{
+  "lambda": {
+    "role": "pizzeria-executor",
+    "name": "pizzeria",
+    "region": "ap-southeast-1"
+  },
+  "api": {
+    "id": "xydc962yr2",
+    "module": "api",
+    "url": "https://xydc962yr2.execute-api.ap-southeast-1.amazonaws.com/latest"
+  }
+}
