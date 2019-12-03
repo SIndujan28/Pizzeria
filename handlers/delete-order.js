@@ -2,7 +2,7 @@ const AWS=require('aws-sdk')
 const docClient=new AWS.DynamoDB.DocumentClient()
 
 function deleteOrder(orderId) {
-    if (!id) {
+    if (!orderId) {
         throw new Error('To cancel pizza order,please specify order id')
     }
     return docClient.delete({
