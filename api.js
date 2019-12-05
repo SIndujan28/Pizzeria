@@ -7,6 +7,7 @@ const createOrder=require('./handlers/create-order')
 const updateOrder=require('./handlers/update-order')
 const deleteOrder=require('./handlers/delete-order')
 const getOrders=require('./handlers/get-orders')
+const updateDeliveryStatus=require('./handlers/update-delivery-status')
 
 api.get('/', () => 'Welcome to Pizza API')
 api.get('/pizzas',()=>{ return getPizzas() })
@@ -16,5 +17,6 @@ api.get('/orders/{id}',(request)=>{ return getOrders(request.pathParams.id) },{ 
 api.post('/orders',(request)=>{ return createOrder(request.body) },{ success: 201,error: 400 })
 api.put('/orders/{id}',(request) => { return updateOrder(request.pathParams.id,request.body) },{ error: 400 })
 api.delete('/orders/{id}',(request) => { return deleteOrder(request.pathParams.id) },{ error: 400 })
+api.post('/delivery',(request)=>{ return updateDeliveryStatus(request.body) },{ success: 200,error: 400 } )
 
 module.exports=api
