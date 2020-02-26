@@ -1,4 +1,4 @@
-awstfrewqedwsqsgtfrAQ   GFDAQ   gfvdsaRDE3WSZWS3DSWSAWSZSAWSXDXZSXSZSXZzSX'use strict'
+'use strict'
 // require('dotenv').config()
 const Api=require('claudia-api-builder')
 const api=new Api() 
