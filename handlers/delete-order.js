@@ -1,5 +1,6 @@
 const AWS=require('aws-sdk')
 const docClient=new AWS.DynamoDB.DocumentClient()
+const rp=require('minimal-request-promise')
 
 function deleteOrder(orderId) {
     if (!orderId) {
@@ -16,6 +17,12 @@ function deleteOrder(orderId) {
         if( item.orderStatus !== "pending") {
             throw new Error("Order has started processing,cannot delete order now")
         }
+        return rp.delete(`https://some-like-it-hot.effortless-serverless.com/delivery/${orderId}`,{
+            headers:{
+                "Content-type":"application/json",
+                "Authorization":"aunt-marias-pizzeria-1234567890"
+            }
+        })
     })
     .then(() => {
         return docClient.delete({
