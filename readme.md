@@ -1,5 +1,5 @@
 # Pizzeria
-Serverless API developed using claudia.js that can be deployed in AWS lambda with ease.API has all the essential features for a pizzeria shop.
+Serverless API developed using claudia.js that can be deployed in AWS lambda with ease.API has all the essential features for a pizzeria shop such as create,update,cancel orders and claudia abstract the need to configure AWS API gateway as claudia configure it for us.
 
 ## List of features for initial API
   * Listing all pizzas
